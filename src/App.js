@@ -1,25 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Menu from './components/Menu';
+import MenuItem from './components/MenuItem';
+import WelcomeMessage from './components/WelcomeMessage';
+import { LocaleProvider } from './context/LocaleContext';
+import { ThemeProvider } from './context/ThemeContext';
 
 function App() {
+
+  const [locale, setLocale] = useState('en');
+  const [theme, setTheme] = useState('dark');
+
+  const toggleTheme = () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark');
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <LocaleProvider value={{ locale, setLocale }}>
+      <ThemeProvider value={{ theme, toggleTheme }}>
+        <div>
+          <Menu>
+            <MenuItem />
+          </Menu>
+          <WelcomeMessage />
+        </div>
+      </ThemeProvider>
+    </LocaleProvider>
   );
 }
 
