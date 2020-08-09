@@ -1,6 +1,6 @@
 This project is created to demonstrate the usage of [React Context API](https://reactjs.org/docs/context.html)
 
-Blog article for this tutorail can be found [here](https://diarybydhanushka.dev/2020/06/19/state-management-with-reacts-context-api/)
+Blog article for this tutorial can be found [here](https://diarybydhanushka.dev/2020/06/19/state-management-with-reacts-context-api/)
 
 ## Available Scripts
 
