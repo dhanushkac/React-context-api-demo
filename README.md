@@ -1,4 +1,4 @@
-#React Context API demo
+# React Context API demo
 
 This project is created to demonstrate the usage of [React Context API](https://reactjs.org/docs/context.html)
 
